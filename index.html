@@ -1,29 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-up Page</title>
+    <title>Sign-up Astro</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-   <main>
-    <div class="img-container">
-        <figure>
-            <img src="assets/logo_transparent.png" class="logo" alt="">
-        </figure>
-        <figure>
-            <img src="assets/david-becker-crs2vlkSe98-unsplash.jpg" alt="time lapse of star" class="banner-img">
-        </figure>
-    </div>
-    <div class="form-container">
-        <div class="cta-paragraph">
-            <p>Welcome to Astro! This isn't just an online service—it's your cosmic companion on the journey to realizing dreams. Sign up now, and let the universe be your guide. Ready to embark on the extraordinary? 🚀✨"</p>
-        </div>
-        <form action="">
 
-        </form>
-    </div>
-   </main> 
+<body>
+    <main>
+        <div class="imgContainer">
+            <figure>
+                <img src="assets/logo_transparent.png" class="logo" alt="">
+            </figure>
+            <figure>
+                <img src="assets/david-becker-crs2vlkSe98-unsplash.jpg" alt="time lapse of star" class="bannerImg">
+            </figure>
+        </div>
+        <div class="formContainer">
+            <div class="ctaParagraphContainer">
+                <p class="ctaParagraph">
+                    Welcome to Astro! This isn't just an online service—it's your cosmic companion on the journey to
+                    realizing dreams.<br>
+                    Sign up now, and let the universe be your guide.
+                    <br>
+                    <span>Ready to embark on the extraordinary? 🚀✨</span>
+                </p>
+            </div>
+            <form action="" method="">
+                <legend>Details in, Galactic Journey Out!</legend>
+                <div class="formGroup">
+                    <div class="formControl">
+                        <label for="firstName">FIRST NAME*</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name" required />
+                    </div>
+                    <div class="formControl">
+                        <label for="lastName">LAST NAME</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required />
+                    </div>
+                    <div class="formControl">
+                        <label for="email">EMAIL*</label>
+                        <input type="email" id="email" name="email" placeholder="email" required />
+                    </div>
+                    <div class="formControl">
+                        <label for="phoneNumber">PHONE NUMBER*</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required />
+                    </div>
+                    <div class="formControl">
+                        <label for="userPassword">PASSWORD*</label>
+                        <input type="password" id="userPassword" name="userPassword" placeholder="Password" required />
+                    </div>
+                    <div class="formControl">
+                        <label for="userPasswordConfirm">CONFIRM PASSWORD</label>
+                        <input type="password" id="userPasswordConfirm" name="userPasswordConfirm"
+                            placeholder="Confirm Password" required />
+                    </div>
+                </div>
+                <div class="submit-btn-container">
+                    <button type="submit">Create Account</button>
+                    <p class="existingAccountAccess">Already have an Account? <a>Log in</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
 </body>
+
 </html>
