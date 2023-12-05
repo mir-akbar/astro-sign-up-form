@@ -12,6 +12,16 @@
     font-family: 'Bluunext', sans-serif;
 }
 
+h1 {
+    grid-column: 1 / 3;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.28;
+    word-spacing: 0.1rem;
+    color: #EAEAEA;
+    margin-bottom: 1rem;
+}
+
 main {
     width: 100%;
     height: 100vh;
@@ -31,8 +41,7 @@ main .formContainer {
     width: 100%;
     max-width: calc(100% - 500px);
     height: 100vh;
-    background-color: #252A34;
-    padding: 2rem 2rem;
+    background-color: #0A0E17;
 }
 
 .logo {
@@ -54,47 +63,115 @@ main .formContainer {
 .formContainer .ctaParagraphContainer {
     width: 100%;
     max-width: 750px;
+    padding: 2rem 3rem;
+    padding-top: 6rem;
 }
 
 .ctaParagraph {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 600;
     line-height: 1.28;
-    color: #fff;
-    margin: 4rem 1rem;
+    word-spacing: 0.1rem;
+    color: #EAEAEA;
 }
 
 .ctaParagraph span {
     display: block;
-    margin: 1.5rem 0;
-}
-
-.formContainer form {
-    margin: 0 1rem;
+    margin-top: 1.5rem;
 }
 
 form .formGroup {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
+    grid-gap: 1.2rem 1rem;
+    font-family: sans-serif;
+    word-spacing: 0.1rem;
+    padding:2rem 3rem;
+}
+
+form .submitBtnContainer {
+    padding: 2rem 3rem;
 }
 
 .formGroup .formControl {
     width: 100%;
-    color: #fff;
-    font-size: 1.7rem;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    color: #EAEAEA;
     font-weight: 600;
     line-height: 1.28;
 }
 
-legend {
-    font-size: 1.7rem;
-    font-weight: 600;
+.formGroup .formControl label {
+    font-size: 0.8rem;
     line-height: 1.28;
-    color: #fff;
-    margin-bottom: 1rem;
+    word-spacing: 0.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.formGroup .formControl input {
+    appearance: none;
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background-color: #0a0e17;
+    color: #EAEAEA;
+    word-spacing: 0.2rem;
+}
+
+.formGroup .formControl input:focus {
+    outline: none;
+    border: 1px solid #5E93E8;
 }
 
 input::placeholder {
+    color: #B0B0B0;
     text-transform: uppercase;
 }
+
+.formGroup .formControl input:invalid {
+    border: 1px solid red;
+}
+
+.formGroup .formControl input:valid {
+    border: 1px solid green;
+}
+
+.submitBtnContainer button[type="submit"] {
+    width: 100%;
+    max-width: 220px;
+    padding:0.6rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: #EAEAEA;
+    background-color: #45AAB8;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.28;
+    word-spacing: 0.1rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+
+}
+
+.submitBtnContainer .existingUser {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.28;
+    word-spacing: 0.1rem;
+    color: #EAEAEA;
+}
+
+.submitBtnContainer a {
+    text-decoration: none;
+    color: #45AAB8;
+}
+
+.formControl span {
+    color: red;
+}
+
+
+

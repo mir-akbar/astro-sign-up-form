@@ -4,8 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-up Astro</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_package/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_package/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_package/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_package/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon_package/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="styles.css">
+    <title>Sign-up Astro</title>
 </head>
 
 <body>
@@ -21,7 +28,8 @@
         <div class="formContainer">
             <div class="ctaParagraphContainer">
                 <p class="ctaParagraph">
-                    Welcome to Astro! This isn't just an online service—it's your cosmic companion on the journey to
+                    Welcome to Astro! This isn't just an online service<br>
+                    —it's your cosmic companion on the journey to
                     realizing dreams.<br>
                     Sign up now, and let the universe be your guide.
                     <br>
@@ -29,37 +37,37 @@
                 </p>
             </div>
             <form action="" method="">
-                <legend>Details in, Galactic Journey Out!</legend>
                 <div class="formGroup">
+                    <h1>Details in, Galactic Journey Out!</h1>
                     <div class="formControl">
-                        <label for="firstName">FIRST NAME*</label>
-                        <input type="text" id="firstName" name="firstName" placeholder="First Name" required />
+                        <label for="firstName">FIRST NAME <span>*</span></label>
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name" pattern="[a-zA-Z]+" required />
                     </div>
                     <div class="formControl">
-                        <label for="lastName">LAST NAME</label>
-                        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required />
+                        <label for="lastName">LAST NAME <span>*</span></label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Last Name" pattern="[a-zA-Z]+" required />
                     </div>
                     <div class="formControl">
-                        <label for="email">EMAIL*</label>
+                        <label for="email">EMAIL <span>*</span></label>
                         <input type="email" id="email" name="email" placeholder="email" required />
                     </div>
                     <div class="formControl">
-                        <label for="phoneNumber">PHONE NUMBER*</label>
+                        <label for="phoneNumber">PHONE NUMBER <span>*</span></label>
                         <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required />
                     </div>
                     <div class="formControl">
-                        <label for="userPassword">PASSWORD*</label>
+                        <label for="userPassword">PASSWORD <span>*</span></label>
                         <input type="password" id="userPassword" name="userPassword" placeholder="Password" required />
                     </div>
                     <div class="formControl">
-                        <label for="userPasswordConfirm">CONFIRM PASSWORD</label>
+                        <label for="userPasswordConfirm">CONFIRM PASSWORD <span>*</span></label>
                         <input type="password" id="userPasswordConfirm" name="userPasswordConfirm"
                             placeholder="Confirm Password" required />
                     </div>
                 </div>
-                <div class="submit-btn-container">
+                <div class="submitBtnContainer">
                     <button type="submit">Create Account</button>
-                    <p class="existingAccountAccess">Already have an Account? <a>Log in</a></p>
+                    <p class="existingUser">Already have an Account? <a href="#">Log in</a></p>
                 </div>
             </form>
         </div>
