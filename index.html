@@ -17,15 +17,18 @@
 
 <body>
     <main>
-        <div class="imgContainer">
+        <div class="leftSectionContainer">
             <figure>
-                <img src="assets/logo_transparent.png" class="logo" alt="">
+                <img src="assets/logo_transparent.png" class="logo" alt="company logo">
             </figure>
             <figure>
-                <img src="assets/david-becker-crs2vlkSe98-unsplash.jpg" alt="time lapse of star" class="bannerImg">
+                <img src="assets/david-becker-crs2vlkSe98-unsplash.jpg" alt="time lapse of star" class="bgImg" loading="lazy">
             </figure>
+            <div class="creditsContainer">
+                <p class="credit">Image by <a href="https://unsplash.com/@beckerworks" target="_blank">David Becker</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+            </div>
         </div>
-        <div class="formContainer">
+        <div class="rightSectionContainer">
             <div class="ctaParagraphContainer">
                 <p class="ctaParagraph">
                     Welcome to Astro! This isn't just an online service<br>
@@ -53,7 +56,7 @@
                     </div>
                     <div class="formControl">
                         <label for="phoneNumber">PHONE NUMBER <span>*</span></label>
-                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required />
+                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" pattern="(\+\d{2})?\d{10}" required />
                     </div>
                     <div class="formControl">
                         <label for="userPassword">PASSWORD <span>*</span></label>
