@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 @font-face {
     font-family: 'Bluunext';
     src: url(assets/font/BluuNext-Bold.otf) format('otf'),
@@ -9,7 +11,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Bluunext', sans-serif;
+    font-family: 'Bluunext', 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
 }
 
 h1 {
@@ -22,6 +29,7 @@ h1 {
     margin-bottom: 1rem;
 }
 
+/* MAIN LAYOUT */
 main {
     width: 100%;
     height: 100vh;
@@ -29,7 +37,7 @@ main {
     align-items: center;
 }
 
-main .imgContainer {
+main .leftSectionContainer {
     position: relative;
     width: 100%;
     max-width: 500px;
@@ -37,7 +45,7 @@ main .imgContainer {
     overflow: hidden;
 }
 
-main .formContainer {
+main .rightSectionContainer {
     width: 100%;
     max-width: calc(100% - 500px);
     height: 100vh;
@@ -54,13 +62,30 @@ main .formContainer {
     object-fit: contain;
 }
 
-.imgContainer .bannerImg {
+.leftSectionContainer .bgImg {
     z-index: 0;
     object-fit: scale-down;
     transform: translate(-55%, -55%);
 }
 
-.formContainer .ctaParagraphContainer {
+.creditsContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1.28;
+    word-spacing: 0.1rem;
+    color: #EAEAEA;
+}
+
+.credit > a {
+    text-decoration: underline;
+}
+
+.rightSectionContainer .ctaParagraphContainer {
     width: 100%;
     max-width: 750px;
     padding: 2rem 3rem;
@@ -69,7 +94,6 @@ main .formContainer {
 
 .ctaParagraph {
     font-size: 1.6rem;
-    font-weight: 600;
     line-height: 1.28;
     word-spacing: 0.1rem;
     color: #EAEAEA;
@@ -80,6 +104,27 @@ main .formContainer {
     margin-top: 1.5rem;
 }
 
+/* animation */
+@keyframes silo-fade {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-1.4em);
+        -moz-transform: translateY(-1.4em);
+        -ms-transform: translateY(-1.4em);
+        -o-transform: translateY(-1.4em);
+        transform: translateY(-1.4em);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+/* FORM STYLES */
 form .formGroup {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -94,49 +139,71 @@ form .submitBtnContainer {
 }
 
 .formGroup .formControl {
+    position: relative;
     width: 100%;
-    max-width: 250px;
+    max-width: 280px;
     display: flex;
     flex-direction: column;
     color: #EAEAEA;
-    font-weight: 600;
     line-height: 1.28;
 }
 
 .formGroup .formControl label {
-    font-size: 0.8rem;
-    line-height: 1.28;
+    position: absolute;
+    top: 0.6rem;
+    left: 1rem;
+    display: none;
+    font-size: 0.7rem;
     word-spacing: 0.1rem;
     margin-bottom: 0.2rem;
+    animation: silo-fade 0.3s;
 }
 
 .formGroup .formControl input {
     appearance: none;
     width: 100%;
-    padding: 0.6rem 1rem;
+    padding: 1.5rem 1rem 0.7rem 1rem;
     border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    background-color: #0a0e17;
+    border-radius: 0.8rem;
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
     color: #EAEAEA;
     word-spacing: 0.2rem;
+    transition: all 0.4s ease-in-out;
 }
 
-.formGroup .formControl input:focus {
-    outline: none;
-    border: 1px solid #5E93E8;
-}
+
 
 input::placeholder {
+    font-family: 'Bluunext', 'Roboto', sans-serif;
     color: #B0B0B0;
     text-transform: uppercase;
+    font-size: 0.8rem;
 }
 
-.formGroup .formControl input:invalid {
+input:focus::placeholder {
+    color: transparent;
+}
+
+.formGroup .formControl input:invalid:not(:placeholder-shown) {
     border: 1px solid red;
 }
 
 .formGroup .formControl input:valid {
-    border: 1px solid green;
+    border: 1px solid green; 
+}
+
+form .formGroup .formControl input:focus {
+    outline: none;
+    border: 1px solid #4789f3;
+}
+
+.formGroup .formControl input:focus + label,
+.formGroup .formControl input:valid + label, 
+.formGroup .formControl input:not(:placeholder-shown) + label
+{
+    display: block;
 }
 
 .submitBtnContainer button[type="submit"] {
@@ -148,7 +215,6 @@ input::placeholder {
     color: #EAEAEA;
     background-color: #45AAB8;
     font-size: 1.2rem;
-    font-weight: 600;
     line-height: 1.28;
     word-spacing: 0.1rem;
     cursor: pointer;
@@ -158,20 +224,17 @@ input::placeholder {
 
 .submitBtnContainer .existingUser {
     font-size: 1.1rem;
-    font-weight: 300;
     line-height: 1.28;
     word-spacing: 0.1rem;
     color: #EAEAEA;
 }
 
 .submitBtnContainer a {
-    text-decoration: none;
     color: #45AAB8;
 }
 
 .formControl span {
     color: red;
 }
-
 
 
