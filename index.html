@@ -43,29 +43,29 @@
                 <div class="formGroup">
                     <h1>Details in, Galactic Journey Out!</h1>
                     <div class="formControl">
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name" pattern="[a-zA-Z]+" maxlength="25" required />
                         <label for="firstName">FIRST NAME <span>*</span></label>
-                        <input type="text" id="firstName" name="firstName" placeholder="First Name" pattern="[a-zA-Z]+" required />
                     </div>
                     <div class="formControl">
+                        <input type="text" id="lastName" name="lastName" placeholder="Last Name" pattern="[a-zA-Z]+" maxlength="50" required />
                         <label for="lastName">LAST NAME <span>*</span></label>
-                        <input type="text" id="lastName" name="lastName" placeholder="Last Name" pattern="[a-zA-Z]+" required />
                     </div>
                     <div class="formControl">
-                        <label for="email">EMAIL <span>*</span></label>
                         <input type="email" id="email" name="email" placeholder="email" required />
+                        <label for="email">EMAIL <span>*</span></label>
                     </div>
                     <div class="formControl">
-                        <label for="phoneNumber">PHONE NUMBER <span>*</span></label>
                         <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" pattern="(\+\d{2})?\d{10}" required />
+                        <label for="phoneNumber">PHONE NUMBER <span>*</span></label>
                     </div>
                     <div class="formControl">
+                        <input type="password" id="userPassword" name="userPassword" placeholder="Password" minlength="8" maxlength="11" required />
                         <label for="userPassword">PASSWORD <span>*</span></label>
-                        <input type="password" id="userPassword" name="userPassword" placeholder="Password" required />
                     </div>
                     <div class="formControl">
-                        <label for="userPasswordConfirm">CONFIRM PASSWORD <span>*</span></label>
                         <input type="password" id="userPasswordConfirm" name="userPasswordConfirm"
-                            placeholder="Confirm Password" required />
+                        placeholder="Confirm Password" minlength="8" maxlength="11" required />
+                        <label for="userPasswordConfirm">CONFIRM PASSWORD <span>*</span></label>
                     </div>
                 </div>
                 <div class="submitBtnContainer">
