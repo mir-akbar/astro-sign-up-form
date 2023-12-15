@@ -99,9 +99,9 @@ main .rightSectionContainer {
 
 .rightSectionContainer .ctaParagraphContainer {
     width: 100%;
-    max-width: 50svw;
-    margin:0 0 3rem 1rem;
-    padding:0 2rem;
+    max-width: 60svw;
+    margin: 1.5rem 1rem 3rem 1rem;
+    padding: 0 2rem;
 }
 
 .ctaParagraph {
@@ -140,19 +140,18 @@ main .rightSectionContainer {
 form .formGroup {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1.7rem 1rem;
+    grid-gap: 2rem 1rem;
     font-family: sans-serif;
     word-spacing: 0.1rem;
     padding: 0rem 3rem;
     margin-bottom: 2.5rem;
     width: 100%;
-    max-width: 800px;
+    max-width: 55svw;
 }
 
 .formGroup>p {
     grid-column: 1 / 3;
     font-size: 1.8rem;
-    font-weight: 600;
     line-height: 1.28;
     word-spacing: 0.1rem;
 }
@@ -164,7 +163,7 @@ form .submitBtnContainer {
 .formGroup .formControl {
     position: relative;
     width: 100%;
-    max-width: 280px;
+    max-width: 20vw;
     display: flex;
     flex-direction: column;
     line-height: 1.28;
@@ -262,3 +261,162 @@ button[type="submit"]:hover {
 }
 
 /* MEDIA QUERIES */
+
+@media screen and (max-width: 1024px) {
+    .rightSectionContainer .ctaParagraphContainer {
+        margin-bottom: 2.5rem;
+    }
+
+    .ctaParagraph {
+        font-size: 1.4rem;
+    }
+
+    /* form */
+    form .formGroup {
+        grid-gap: 1.5rem 1rem;
+    }
+
+    .formGroup>p {
+        font-size: 1.6rem;
+    }
+
+    .formGroup .formControl {
+        max-width: 21vw;
+    }
+
+    .formGroup .formControl input {
+        font-size: 0.9rem;
+        padding: 1.5rem 1rem 0.6rem 0.9rem;
+    }
+
+    .formGroup .formControl label {
+        top: 0.5rem;
+        left: 0.85rem;
+        font-size: 0.6rem;
+    }
+
+    input::placeholder {
+        font-size: 0.7rem;
+    }
+
+    .submitBtnContainer>button[type="submit"] {
+        max-width: 200px;
+        padding: 0.5rem 1rem;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .submitBtnContainer>.existingUser {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 220px;
+    }
+
+    .creditsContainer {
+        font-size: 0.7rem;
+    }
+
+    .rightSectionContainer .ctaParagraphContainer {
+        margin-bottom: 2rem;
+    }
+
+    .ctaParagraph {
+        font-size: 1.2rem;
+    }
+
+    .ctaParagraph span {
+        margin-top: 1rem;
+    }
+
+    /* form */
+    form .formGroup {
+        max-width: 60vw;
+    }
+
+    .formGroup .formControl {
+        max-width: 25vw;
+    }
+
+    .formGroup>p {
+        font-size: 1.4rem;
+    }
+
+    .formGroup .formControl input {
+        font-size: 0.8rem;
+        padding: 1.5rem 1rem 0.6rem 0.8rem;
+    }
+
+    input::placeholder {
+        font-size: 0.65rem;
+    }
+
+    .submitBtnContainer>button[type="submit"] {
+        max-width: 180px;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .submitBtnContainer>.existingUser {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        width: 180px;
+    }
+
+    .creditsContainer {
+        font-size: 0.6rem;
+    }
+
+    .rightSectionContainer .ctaParagraphContainer {
+        margin-bottom: 1.5rem;
+    }
+
+    .ctaParagraph {
+        font-size: 1rem;
+    }
+
+    .ctaParagraph span {
+        margin-top: 0.8rem;
+    }
+
+    /* form */
+    form .formGroup {
+        max-width: 65vw;
+    }
+
+    .formGroup .formControl {
+        max-width: 30vw;
+    }
+
+    .formGroup>p {
+        font-size: 1.2rem;
+    }
+
+    .formGroup .formControl input {
+        font-size: 0.7rem;
+        padding: 1.5rem 1rem 0.6rem 0.7rem;
+    }
+
+    input::placeholder {
+        font-size: 0.6rem;
+    }
+
+    .submitBtnContainer>button[type="submit"] {
+        max-width: 160px;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .submitBtnContainer>.existingUser {
+        font-size: 0.8rem;
+    }
+}
