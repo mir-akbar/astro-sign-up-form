@@ -12,6 +12,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
     <title>Sign-up Astro</title>
 </head>
 
@@ -45,13 +46,13 @@
                 <div class="formGroup">
                     <p>Details in, Galactic Journey Out!</p>
                     <div class="formControl">
-                        <input type="text" id="firstName" name="firstName" placeholder="First Name *"
-                            pattern="[a-zA-Z]+" maxlength="25" required />
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name *" pattern="[a-zA-Z]+(?: [a-zA-Z]+)?
+                            " minlength="2" maxlength="25" required />
                         <label for="firstName">FIRST NAME <span>*</span></label>
                     </div>
                     <div class="formControl">
                         <input type="text" id="lastName" name="lastName" placeholder="Last Name *" pattern="[a-zA-Z]+"
-                            maxlength="50" required />
+                            minlength="1" maxlength="50" required />
                         <label for="lastName">LAST NAME <span>*</span></label>
                     </div>
                     <div class="formControl">
@@ -65,12 +66,12 @@
                     </div>
                     <div class="formControl">
                         <input type="password" id="userPassword" name="userPassword" placeholder="Password *"
-                            minlength="8" maxlength="11" required />
+                            minlength="8" maxlength="15" required />
                         <label for="userPassword">PASSWORD <span>*</span></label>
                     </div>
                     <div class="formControl">
                         <input type="password" id="userPasswordConfirm" name="userPasswordConfirm"
-                            placeholder="Confirm Password *" minlength="8" maxlength="11" required />
+                            placeholder="Confirm Password *" minlength="8" maxlength="15" required />
                         <label for="userPasswordConfirm">CONFIRM PASSWORD <span>*</span></label>
                     </div>
                 </div>
