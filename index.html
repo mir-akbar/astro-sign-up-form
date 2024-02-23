@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_package/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_package/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_package/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon_package/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon_package/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_package/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_package/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_package/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicon_package/site.webmanifest" />
+    <link rel="mask-icon" href="assets/favicon_package/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="index.js" defer></script>
     <title>Sign-up Astro</title>
 </head>
@@ -20,64 +20,114 @@
     <main>
         <div class="leftSectionContainer">
             <figure>
-                <img src="assets/logo_transparent.png" class="logo" alt="company logo">
+                <img src="assets/logo_transparent.png" class="logo" alt="company logo" />
             </figure>
             <figure>
                 <img src="assets/david-becker-crs2vlkSe98-unsplash.jpg" alt="time lapse of star" class="bgImg"
-                    loading="lazy">
+                    loading="lazy" />
             </figure>
             <div class="creditsContainer">
-                <p class="credit">Image by <a href="https://unsplash.com/@beckerworks" target="_blank">David Becker</a>
-                    on <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+                <p class="credit">
+                    Image by
+                    <a href="https://unsplash.com/@beckerworks" target="_blank">David Becker</a>
+                    on <a href="https://unsplash.com/" target="_blank">Unsplash</a>
+                </p>
+            </div>
+            <div class="iconContainer">
+                <a href="#rightSection">
+                    <svg viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" fill="#ffffff"></path></g></svg>
+                </a>
             </div>
         </div>
-        <div class="rightSectionContainer">
+        <div class="rightSectionContainer" id="rightSection">
             <div class="ctaParagraphContainer">
                 <h1 class="ctaParagraph">
-                    Welcome to Astro! This isn't just an online service<br>
-                    —it's your cosmic companion on the journey to
-                    realizing dreams.<br>
+                    Welcome to Astro! This isn't just an online service<br />
+                    —it's your cosmic companion on the journey to realizing dreams.<br />
                     Sign up now, and let the universe be your guide.
-                    <br>
+                    <br />
                     <span>Ready to embark on the extraordinary? 🚀✨</span>
                 </h1>
             </div>
             <form action="" method="">
                 <div class="formGroup">
                     <p>Details in, Galactic Journey Out!</p>
-                    <div class="formControl">
-                        <input type="text" id="firstName" name="firstName" placeholder="First Name *" pattern="[a-zA-Z]+(?: [a-zA-Z]+)?
-                            " minlength="2" maxlength="25" required />
-                        <label for="firstName">FIRST NAME <span>*</span></label>
+                    <div class="formControlWrapper">
+                        <div class="formControl">
+                            <input type="text" id="firstName" name="firstName" placeholder="First Name *"
+                                pattern="[a-zA-Z]+(?: [a-zA-Z]+)?" minlength="2" maxlength="25" required />
+                            <label for="firstName">FIRST NAME <span>*</span></label>
+                        </div>
+                        <div class="infoPrompt">
+                            <p class="format" id="format">* Format: John/John Doe</p>
+                        </div>
                     </div>
-                    <div class="formControl">
-                        <input type="text" id="lastName" name="lastName" placeholder="Last Name *" pattern="[a-zA-Z]+"
-                            minlength="1" maxlength="50" required />
-                        <label for="lastName">LAST NAME <span>*</span></label>
+
+                    <div class="formControlWrapper">
+                        <div class="formControl">
+                            <input type="text" id="lastName" name="lastName" placeholder="Last Name *"
+                                pattern="[a-zA-Z]+" minlength="1" maxlength="50" required />
+                            <label for="lastName">LAST NAME <span>*</span></label>
+                        </div>
+                        <div class="infoPrompt">
+                            <p class="format" id="format">* Format: Doe</p>
+                        </div>
                     </div>
-                    <div class="formControl">
-                        <input type="email" id="email" name="email" placeholder="Email *" required />
-                        <label for="email">EMAIL <span>*</span></label>
+
+                    <div class="formControlWrapper">
+                        <div class="formControl">
+                            <input type="email" id="email" name="email" placeholder="Email *" required />
+                            <label for="email">EMAIL <span>*</span></label>
+                        </div>
+                        <div class="infoPrompt">
+                            <p class="format" id="format">* Format: you@your.email</p>
+                        </div>
                     </div>
-                    <div class="formControl">
-                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number *"
-                            pattern="(\+\d{2})?\d{10}" required />
-                        <label for="phoneNumber">PHONE NUMBER <span>*</span></label>
+
+                    <div class="formControlWrapper">
+                        <div class="formControl">
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number *"
+                                pattern="^(\+\d{1,2})?\d{10}$" required />
+                            <label for="phoneNumber">PHONE NUMBER <span>*</span></label>
+                        </div>
+                        <div class="infoPrompt">
+                            <p class="format" id="format">
+                                * Format:+12(Opt)/0123456789</b>
+                            </p>
+                        </div>
                     </div>
-                    <div class="formControl">
-                        <input type="password" id="userPassword" name="userPassword" placeholder="Password *"
-                            minlength="8" maxlength="15" required />
-                        <label for="userPassword">PASSWORD <span>*</span></label>
+
+                    <div class="formControlWrapper">
+                        <div class="formControl">
+                            <input type="password" id="userPassword" name="userPassword" placeholder="Password *"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,15}" minlength="8"
+                                maxlength="15" required />
+                            <label for="userPassword">PASSWORD <span>*</span></label>
+                        </div>
+                        <div class="infoPrompt">
+                            <p class="format">
+                                *8-15 characters, Uppercase, Lowercase, Number, Symbol
+                                required.
+                            </p>
+                        </div>
                     </div>
-                    <div class="formControl">
-                        <input type="password" id="userPasswordConfirm" name="userPasswordConfirm"
-                            placeholder="Confirm Password *" minlength="8" maxlength="15" required />
-                        <label for="userPasswordConfirm">CONFIRM PASSWORD <span>*</span></label>
+
+                    <div class="formControlWrapper">
+                        <div class="formControl">
+                            <input type="password" id="userPasswordConfirm" name="userPasswordConfirm"
+                                placeholder="Confirm Password *" required />
+                            <label for="userPasswordConfirm">CONFIRM PASSWORD <span>*</span></label>
+                        </div>
+                        <div class="infoPrompt">
+                            <p class="format">Passwords dont match. Please try again.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="submitBtnContainer">
                     <button type="submit">Create Account</button>
-                    <p class="existingUser">Already have an Account? <a href="#">Log in</a></p>
+                    <p class="existingUser">
+                        Already have an Account? <a href="#">Log in</a>
+                    </p>
                 </div>
             </form>
         </div>
